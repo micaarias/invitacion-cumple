@@ -833,7 +833,7 @@ html, body {
   .cd-item   { padding: 1rem 1.2rem; min-width: 70px; }
   .home-cta  { font-size: 0.85rem; }
   .lovely-mascot { right: -20px; width: 75px; } 
-  .confetti-piece { display: none; } 
+
 }
 
 
@@ -908,11 +908,11 @@ html, body {
 }
 
 .confetti-field {
-  position: absolute;
-  inset: -30px;
+   position: absolute;
+  inset: -10px; 
   pointer-events: none;
   z-index: 0;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .confetti-piece {
