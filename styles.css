@@ -908,7 +908,7 @@ html, body {
 }
 
 .confetti-field {
-   position: absolute;
+   position: fixed;
   inset: -10px; 
   pointer-events: none;
   z-index: 0;

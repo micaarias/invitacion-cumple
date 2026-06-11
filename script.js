@@ -199,8 +199,8 @@ function spawnCountdownDecor() {
     const el = document.createElement('div');
     el.className = 'confetti-piece';
     el.textContent = pieces[Math.floor(Math.random() * pieces.length)];
-    el.style.left = Math.random() * 120 - 10 + '%';
-    el.style.top = Math.random() * 100 + '%';
+    el.style.left = (10 + Math.random() * 80) + '%'; // 👈 entre 10% y 90%, no se sale
+    el.style.top = (5 + Math.random() * 90) + '%';
     el.style.fontSize = (0.7 + Math.random() * 0.8) + 'rem';
     el.style.animationDuration = (2.5 + Math.random() * 3) + 's';
     el.style.animationDelay = (Math.random() * 3) + 's';
