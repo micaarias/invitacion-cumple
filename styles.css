@@ -390,7 +390,7 @@ html, body {
    ============================================= */
 
 #view-home {
-  overflow: hidden;
+  overflow-x: hidden;
   display: none;
   flex-direction: column;
   align-items: center;
