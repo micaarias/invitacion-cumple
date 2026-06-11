@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mica's Cumpleañito 🎀</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <!-- ======= ENVELOPE SCREEN ======= -->
+  <div id="screen-envelope">
+    <div class="envelope" id="envelope">
+      <div class="env-body">
+        <div class="env-left"></div>
+        <div class="env-right"></div>
+        <div class="env-bottom"></div>
+        <div class="env-letter">
+          <div class="env-letter-title">Para vos 🎀</div>
+          Fuiste elegida/o para el evento<br>más importante de junio…
+        </div>
+        <div class="env-flap"></div>
+        <div class="env-seal">💌</div>
+      </div>
+    </div>
+    <button class="btn-open" id="btnOpen">Abrílo si te animás 👀</button>
+  </div>
+
+  <!-- ======= APP ======= -->
+  <div id="app">
+
+    <!-- NAVBAR DESKTOP -->
+    <nav id="navbar">
+      <span class="nav-brand">Mica's Cumpleañito 🎀</span>
+      <div class="nav-links">
+        <button class="nav-btn active" data-view="home">🏠 Inicio</button>
+        <button class="nav-btn" data-view="detalles">📋 Detalles</button>
+        <button class="nav-btn" data-view="playlist">🎵 Playlist</button>
+        <button class="nav-btn" data-view="rsvp">💌 RSVP</button>
+        <button class="nav-btn" data-view="minijuego">🃏 Minijuego</button>
+        <button class="nav-btn" data-view="funfacts">🌟 Fun Facts</button>
+      </div>
+    </nav>
+
+    <!-- NAVBAR MOBILE -->
+    <nav id="navbar-mobile">
+      <button class="mob-btn active" data-view="home"><span class="mob-icon">🏠</span><span class="mob-label">Inicio</span></button>
+      <button class="mob-btn" data-view="detalles"><span class="mob-icon">📋</span><span class="mob-label">Detalles</span></button>
+      <button class="mob-btn" data-view="playlist"><span class="mob-icon">🎵</span><span class="mob-label">Playlist</span></button>
+      <button class="mob-btn" data-view="rsvp"><span class="mob-icon">💌</span><span class="mob-label">RSVP</span></button>
+      <button class="mob-btn" data-view="minijuego"><span class="mob-icon">🃏</span><span class="mob-label">Juego</span></button>
+      <button class="mob-btn" data-view="funfacts"><span class="mob-icon">🌟</span><span class="mob-label">Fun Facts</span></button>
+    </nav>
+
+    <!-- VIEW: HOME -->
+    <div class="view active" id="view-home">
+  <div class="home-countdown">
+    <div class="home-countdown-title">Faltan exactamente…</div>
+    <div class="countdown-wrapper">
+      <div class="confetti-field" id="confettiField"></div>
+      <div class="cd-grid">
+        <div class="cd-item"><div class="cd-num" id="cd-d">--</div><div class="cd-label">Días</div></div>
+        <div class="cd-item"><div class="cd-num" id="cd-h">--</div><div class="cd-label">Horas</div></div>
+        <div class="cd-item"><div class="cd-num" id="cd-m">--</div><div class="cd-label">Min</div></div>
+        <div class="cd-item"><div class="cd-num" id="cd-s">--</div><div class="cd-label">Seg</div></div>
+      </div>
+      <img src="img/jively-tortita.png" alt="Jihyo Lovely" class="lovely-mascot" />
+    </div>
+
+  <div class="home-divider"></div>
+  <div class="home-event">
+    <p class="home-subtitle">Welcome to Pop Girly Night 🎂</p>
+    <h1 class="home-title">Fuiste elegida/o para el evento más importante de junio</h1>
+    <p class="home-text">Incluye juegos, comida rica, torta y la posibilidad de perder tu dignidad en alguna actividad grupal.</p>
+    <button class="home-cta" id="btnProcedo">Yendo no, llegando 🎉</button>
+  </div>
+</div>
+</div>
+
+    <!-- VIEW: DETALLES -->
+    <div class="view" id="view-detalles">
+  <div class="view-inner">
+    <h2 class="section-title">Detallitos a tener en cuenta</h2>
+    <div class="detail-cards">
+      <div class="dcard">
+        <div class="dcard-icon">📅</div>
+        <h3>Fecha</h3>
+        <p>Viernes, 19 de junio</p>
+      </div>
+      <div class="dcard">
+        <div class="dcard-icon">🕘</div>
+        <h3>Hora</h3>
+        <p>21:00 hs</p>
+      </div>
+      <div class="dcard">
+        <div class="dcard-icon">📍</div>
+        <h3>Lugar</h3>
+        <p>Losco Bar</p>
+        <div class="location-hidden" id="location-hidden-msg">
+          Confirmá tu asistencia en RSVP para ver la dirección 🔒
+        </div>
+        <div id="location-real">
+          <p class="location-address">📍 <strong>Fructuoso Rivera 216</strong></p>
+          <small>Córdoba, Argentina</small>
+        </div>
+      </div>
+      <div class="dcard">
+        <div class="dcard-icon">👗</div>
+        <h3>Dress code</h3>
+        <p>✨ No hay dress code. Vestite como quieras.</p>
+        <p> Solo me gustaba cómo se veía una card que dijera "Dress Code". </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- VIEW: PLAYLIST -->
+    <div class="view" id="view-playlist">
+      <div class="view-inner view-inner--center">
+        <h2 class="section-title">La vibe de la noche 🎵</h2>
+        <p class="view-sub">Esta es la música que los obligaría a escuchar si pudiera poner música en el bar, se salvaron 🎀</p>
+        <div class="spotify-wrap">
+          <!-- 🎵 Reemplazá el src con el embed de tu playlist de Spotify -->
+          <iframe
+            style="border-radius:12px"
+            src="https://open.spotify.com/embed/playlist/5CyiHQDs65Psv8QhAa0P5r?utm_source=generator"
+            width="100%"
+            height="380"
+            frameBorder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+          </iframe>
+        </div>
+        <p class="playlist-note">⬆️Para sorpresa de nadie, obvio jajs Igual escúchenla, es god.</p>
+      </div>
+    </div>
+
+    <!-- VIEW: RSVP -->
+    <div class="view" id="view-rsvp">
+      <div class="view-inner view-inner--center">
+        <h2 class="section-title">Confirmá asistencia así sé cuántas personas eligieron mi cumpleaños por encima de Brasil vs. Haití</h2>
+        <p class="view-sub">Acordate de que soy rencorosa 🥰</p>
+        <div class="rsvp-form-wrap" id="rsvpFormWrap">
+          <input class="rsvp-input" type="text" id="rsvpName" placeholder="Tu nombre"/>
+          <button class="rsvp-submit" id="rsvpBtn">¡Estoy! 🎉</button>
+        </div>
+        <div id="rsvp-done">
+          <div class="rsvp-success">
+            <div class="rsvp-success-emoji">🎊</div>
+            <p>¡Anotada/o, <strong id="confirmed-name"></strong>! ¡Gracias por confirmnar! tkm 🩷</p>
+            <p class="rsvp-success-hint">La dirección ya apareció en Detalles 📍</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- VIEW: MINIJUEGO -->
+    <div class="view" id="view-minijuego">
+      <div class="view-inner">
+        <h2 class="section-title">El minijuego 🃏</h2>
+        <p class="view-sub view-sub--center">Estos son mis favs 🩷 Elegí una photocard y recibirás un mensaje + serás juzgada/o.</p>
+        <div class="photocards-grid">
+ 
+          <div class="photocard" data-id="taylor">
+            <div class="photocard-inner">
+              <div class="pc-front">
+                <img src="img/taylor.jpg" alt="Taylor Swift" />
+                <div class="pc-name">Taylor Swift</div>
+              </div>
+              <div class="pc-back v-taylor">
+                <div class="pc-back-emoji">👑</div>
+                <div class="pc-back-text">Hay decisiones difíciles.
+✨ Esta no era una de ellas.</div>
+              </div>
+            </div>
+          </div>
+ 
+          <div class="photocard" data-id="sabrina">
+            <div class="photocard-inner">
+              <div class="pc-front">
+                <img src="img/sabrina.jpg" alt="Sabrina Carpenter" />
+                <div class="pc-name">Sabrina Carpenter</div>
+              </div>
+              <div class="pc-back v-sabrina">
+                <div class="pc-back-emoji">🎀</div>
+                <div class="pc-back-text">Elegiste una pequeña amenaza.
+✨ Con moñito.</div>
+              </div>
+            </div>
+          </div>
+ 
+          <div class="photocard" data-id="nick">
+            <div class="photocard-inner">
+              <div class="pc-front">
+                <img src="img/nick.jpg" alt="Nick Jonas" />
+                <div class="pc-name">Nick Jonas</div>
+              </div>
+              <div class="pc-back v-nick">
+                <div class="pc-back-emoji">💙</div>
+                <div class="pc-back-text">Sos demasiado cool para admitir que te divertís.
+✨ Pero te divertís igual.</div>
+              </div>
+            </div>
+          </div>
+ 
+          <div class="photocard" data-id="joe">
+            <div class="photocard-inner">
+              <div class="pc-front">
+                <img src="img/joe.jpg" alt="Joe Jonas" />
+                <div class="pc-name">Joe Jonas</div>
+              </div>
+              <div class="pc-back v-joe">
+                <div class="pc-back-emoji">🕺</div>
+                <div class="pc-back-text">Elegiste a Joe.
+✨ Claramente sabés lo que hacés.</div>
+              </div>
+            </div>
+          </div>
+ 
+          <div class="photocard" data-id="kevin">
+            <div class="photocard-inner">
+              <div class="pc-front">
+                <img src="img/kevin.jpg" alt="Kevin Jonas" />
+                <div class="pc-name">Kevin Jonas</div>
+              </div>
+              <div class="pc-back v-kevin">
+                <div class="pc-back-emoji">🎸</div>
+                <div class="pc-back-text">Sos más importante de lo que parece.
+✨ Como el Wi-Fi.</div>
+              </div>
+            </div>
+          </div>
+ 
+          <div class="photocard" data-id="twice">
+            <div class="photocard-inner">
+              <div class="pc-front">
+                <img src="img/twice.jpg" alt="TWICE" />
+                <div class="pc-name">TWICE</div>
+              </div>
+              <div class="pc-back v-twice">
+                <div class="pc-back-emoji">🌸</div>
+                <div class="pc-back-text">Sos un rayito de sol.
+✨ Pero versión K-pop.</div>
+              </div>
+            </div>
+          </div>
+ 
+          <div class="photocard" data-id="jihyo">
+            <div class="photocard-inner">
+              <div class="pc-front">
+                <img src="img/jihyo.jpg" alt="Jihyo" />
+                <div class="pc-name">Jihyo de Twice</div>
+              </div>
+              <div class="pc-back v-jihyo">
+                <div class="pc-back-emoji">🤩</div>
+                <div class="pc-back-text">No voy a fingir imparcialidad en este tema.
+✨ Tenés excelente gusto</div>
+              </div>
+            </div>
+          </div>
+ 
+        </div>
+        <div class="game-result-box" id="gameResult"></div>
+      </div>
+    </div>
+
+    <!-- VIEW: FUN FACTS -->
+    <div class="view" id="view-funfacts">
+      <div class="view-inner view-inner--center">
+        <h2 class="section-title">Fun Facts 🌟</h2>
+        <p class="view-sub">Cosas que quizás no sabías. O sí. Pero igual te las cuento porque me encanta hablar de mi. Igual una es mentira 🤭</p>
+        <div class="funfacts-list">
+
+          <div class="funfact-item">
+            <div class="funfact-number">01</div>
+            <div class="funfact-content">
+              <p class="funfact-text"> Estás viendo esta invitación porque alguien una vez me dijo "¿No es mucha lógica para vos estudiar programación?" Y acá estoy diseñando una web app para invitarte a mi cumple porque puedo amorrrr (con ayuda del Claudio pero still) 🎀</p>
+            </div>
+          </div>
+
+          <div class="funfact-item">
+            <div class="funfact-number">02</div>
+            <div class="funfact-content">
+              <p class="funfact-text">Durante años pensé que algunas ciudades tenían mejor personalidad que otras. Rosario me parecía re forra.</p>
+            </div>
+          </div>
+
+          <div class="funfact-item">
+            <div class="funfact-number">03</div>
+            <div class="funfact-content">
+              <p class="funfact-text">Tengo una cuenta de Twitter dedicada exclusivamente a subir imágenes de Sailor Moon.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /app -->
+
+  <script src="script.js"></script>
+</body>
+</html>
